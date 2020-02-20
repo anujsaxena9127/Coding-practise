@@ -4,10 +4,10 @@ class GFG {
 	public static void main (String[] args) {
 	
 	Scanner sc= new Scanner(System.in);
-	int t=sc.nextInt();
-	while(t-->0)
+	int t=sc.nextInt();           // it will take the no of testcases
+	while(t-->0)                   
 	{
-	    String s=sc.next();
+	    String s=sc.next();   
 	    
 	    
 	    for(int i=s.length()-1;i>=0;i--)
