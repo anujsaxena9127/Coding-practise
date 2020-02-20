@@ -1,0 +1,22 @@
+link=https://practice.geeksforgeeks.org/problems/reverse-digit/0
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0)
+		{
+		    int num=sc.nextInt();
+		    int rev=0;
+		    while(num>0)
+		    {
+		       rev=rev*10+num%10;
+		       num=num/10;
+		    }
+		    System.out.println(rev);
+
+	}
+}
+}
+
