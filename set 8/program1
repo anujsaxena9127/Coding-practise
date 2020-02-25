@@ -1,0 +1,76 @@
+//sollutions in c
+#include <stdio.h>
+#include <stdlib.h>
+int non_repeating_elements(int arr[], int n)
+{
+int i,j;
+int count = 1;
+for(i = 0; i < n; i++)
+{
+for(j = 0; j < n; j++)
+{
+if(arr[i] == arr[j] && i != j)
+break;
+}
+if(j == n )
+{
+printf("\nNon-repeating element %d ",arr[i]);
+++count;
+}
+}
+return -1;
+}
+int main()
+{
+int n,i;
+printf("\nEnter the number of elements : ");
+scanf("%d",&n);
+int arr[n];
+printf("\nInput the array elements : ");
+for(i = 0; i < n; i++)
+{
+scanf("%d",&arr[i]);
+}
+non_repeating_elements(arr, n);
+return 0;
+}
+output:-
+Enter the number of elements : 5
+Input the array elements : 1 2 3 4 1
+Non-repeating element 2
+Non-repeating element 3
+Non-repeating element 4
+
+
+//solutions in java
+import java.util.*;
+
+public class vowels {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4,1};
+        HashMap<Integer, Integer> a = new HashMap<>();
+        for (int x : arr) {
+            if (!a.containsKey(x)) {
+                a.put(x, 1);
+            } else {
+                a.put(x, a.get(x) + 1);
+            }
+        }
+
+        for (Integer x : a.keySet()) {
+           if (a.get(x) ==1) {
+           System.out.println( x );
+
+}
+
+
+ }
+    }
+}
+output:
+2
+3
+4
+
+
+
