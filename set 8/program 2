@@ -1,0 +1,62 @@
+//solutions in c
+#include<stdio.h>
+void repeating_element(int arr[], int n)
+{
+int i, j;
+int count = 0;
+printf("Repeating elements are: ");
+for(i = 0;i < n;i++)
+{
+for(j = i+1;j < n;j++)
+{
+if(arr[i] == arr[j])
+{
+printf("%d ", arr[j]);
+}
+}
+}
+}
+int main()
+{
+int n;
+scanf("%d",&n);
+int arr[n];
+int i;
+for(i = 0; i < n; i++)
+{
+scanf("%d",&arr[i]);
+}
+repeating_element(arr,n);
+return 0;
+}
+output:-
+5
+1 2 3 1 2
+Repeating elements are: 1 2
+
+//solutions in java
+import java.util.HashMap;
+public class repeatingElements {
+    public static void main(String[] args) {
+        {
+            int arr[] = {1, 2, 3, 1,2};
+            HashMap<Integer, Integer> a = new HashMap<>();
+            for (int x : arr) {
+                if (!a.containsKey(x)) {
+                    a.put(x, 1);
+                } else {
+                    a.put(x, a.get(x) + 1);
+                }
+            }
+
+            for (Integer x : a.keySet()) {
+                if (a.get(x) >1) {
+                    System.out.println( x );
+                }
+            }
+        }
+    }
+}
+output:-
+1
+2
