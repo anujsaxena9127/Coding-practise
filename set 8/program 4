@@ -1,0 +1,100 @@
+//solutions in c
+#include <stdio.h>
+
+int main()
+{
+int arr[100], freq[100];
+int size, i, j, count;
+
+/* Input size of array */
+printf("\nEnter size of array: ");
+scanf("%d", &size);
+
+/* Input elements in array */
+printf("\nEnter elements in array: ");
+for(i=0; i<size; i++)
+{
+scanf("%d", &arr[i]);
+
+/* Initially initialize frequencies to -1 */
+freq[i] = -1;
+}
+
+
+for(i=0; i<size; i++)
+{
+count = 1;
+for(j=i+1; j<size; j++)
+{
+/* If duplicate element is found */
+if(arr[i]==arr[j])
+{
+count++;
+
+/* Make sure not to count frequency of same element again */
+freq[j] = 0;
+}
+}
+
+/* If frequency of current element is not counted */
+if(freq[i] != 0)
+{
+freq[i] = count;
+}
+}
+
+/* Print frequency of each element */
+printf("\nFrequency of all elements of array : \n");
+for(i=0; i<size; i++)
+{
+if(freq[i] != 0)
+{
+printf("%d occurs %d times\n", arr[i], freq[i]);
+}
+}
+}
+
+output:-
+Enter size of array: 9
+
+Enter elements in array: 1 2 3 5 2 9 7 3 5
+
+Frequency of all elements of array :
+1 occurs 1 times
+2 occurs 2 times
+3 occurs 2 times
+5 occurs 2 times
+9 occurs 1 times
+7 occurs 1 times
+// solutions in java
+
+import java.util.HashMap;
+
+public class frequencyofeachCharacter {
+    public static void main(String[] args) {
+        {
+            {
+                int arr[] =  {1, 2, 3, 5, 2, 9, 7, 3, 5};
+                HashMap<Integer, Integer> a = new HashMap<>();
+                for (int x : arr) {
+                    if (!a.containsKey(x)) {
+                        a.put(x, 1);
+                    } else {
+                        a.put(x, a.get(x) + 1);
+                    }
+                }
+
+                for (Integer x : a.keySet()) {
+
+                        System.out.println( "The elements are       "+a.keySet() );
+                    System.out.println("the no of occurences are"+a.values());
+                    break;
+                }
+            }
+        }
+    }
+
+}
+output:-
+The elements are       [1, 2, 3, 5, 7, 9]
+the no of occurences are[1, 2, 2, 2, 1, 1]
