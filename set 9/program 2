@@ -1,0 +1,42 @@
+// solutions in c
+#include<stdio.h>
+int main()
+{
+    int i;
+ 
+   
+    int a[] = {1,2,3,5};
+       int n = 5;
+ 
+    /*Initialize total and sum variable */
+    int total=0,sum=0;
+ 
+    /* calculate sum of n numbers. */
+    total = (n*(n+1))/2;               //1+2+3+4+5=15
+ 
+/* Sum of input array element. */
+    for(i=0 ; i<n-1; i++){
+     sum = sum + a[i];                 //1+2+3+5=11
+    }
+ printf("Missing number is %d",total-sum);   //15-11=4
+    return 0;
+}
+output:-
+Missing number is 4
+
+//solutions in java
+public class missingnumbers {
+    public static void main(String[] args) {
+        int[] arr={1,2,3,5};
+        int n=arr.length+1;
+        int totalsum=n*(n+1)/2;  //1+2+3+4+5=15
+        int sum=0;
+        for (int i=0;i<arr.length;i++)
+        {
+            sum=sum+arr[i];               //1+2+3+5=11
+
+        }
+        System.out.println( "The missing number is "+(totalsum-sum)); //15-11=4
+    }
+}
+The missing number is 4
