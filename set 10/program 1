@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+int a, b, i,j, flag;
+printf("\nEnter start value : ");
+scanf("%d",&a);
+printf("\nEnter end value : ");
+scanf("%d",&b);
+printf("\nPrime Numbers between %d and %d : ", a, b);
+for(i=a;i<=b;i++)
+{ flag=0;
+    for(j=2;j<=i-1;j++)  /* run the loop from 2 to num-1 */ 
+    {
+        if(i%j==0)    /* if it is divisible no is not prime */
+        {
+            flag=1;
+            break;
+        }
+    }
+   
+if(flag==0)         /* else no is prime */
+    {
+    printf("%d",i);
+     }
+}
+return 0;
+}
+output:
+Enter start value : 10
+Enter end value : 50
+Prime Numbers between 10 and 50 : 11	13	17	19	23	29	31	37	41	43	47
