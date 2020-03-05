@@ -11,8 +11,6 @@ int  n,nth=0,i;
 printf("Enter the number \n");
 scanf("%d",&n);
 
-for(i=1;i<n;i++)
-{
    if(n%2==0)
    {
     
@@ -24,7 +22,7 @@ for(i=1;i<n;i++)
        nth=n*n+1;
            
   }
-   }
+   
 printf("the  nth term of series is %d",nth);
  return 0;
 }
