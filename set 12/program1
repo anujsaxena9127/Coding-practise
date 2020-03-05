@@ -1,0 +1,66 @@
+nth term={n^2+1 ,if n is odd
+         { n^2-1 ,if n is even
+         
+//solutions in c
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=0,i;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+
+for(i=1;i<n;i++)
+{
+   if(n%2==0)
+   {
+    
+  nth=n*n-1;
+	
+   }
+   else
+   {
+       nth=n*n+1;
+           
+  }
+   }
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+output:
+Enter the number
+3
+the  nth term of series is 10
+
+//solutions in java
+import java.util.Scanner;
+
+public class arraysacebding {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the nth term you want to find");
+        int n=sc.nextInt();
+        int  nth=0;
+        for(int i=0;i<n;i++)
+        {
+            if(i%2!=0)
+            {
+                nth=n*n-1;
+            }
+            else
+            {
+                nth=n*n+1;
+            }
+        }
+        System.out.println("the nth number is "+nth);
+
+    }
+}
+
+output:
+Enter the nth term you want to find
+3
+the nth number is 10
+
+
