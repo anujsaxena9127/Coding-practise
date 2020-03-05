@@ -1,0 +1,23 @@
+Nth term of the series 1, 5, 32, 288 …
+//solutions in c
+
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=0,i;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+
+for(i=n;i>0;i--)
+{
+    nth=nth+pow(i,i);
+}
+
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+output:-
+Enter the number 
+the  nth term of series is 32
