@@ -1,0 +1,28 @@
+ Find the Nth term in series 12, 35, 81, 173, 357, 
+hint :
+nth term={12 if n=1;
+          lastdigit*2+11 if n>1
+          
+//solutions in c
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=0,i;
+int first=12;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+
+for(i=1;i<n;i++)
+{
+     nth=((first*(pow(2,n-1)))+11*((pow(2,n-1))-1));
+   
+}
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+Enter the number
+4
+the  nth term of series is 173
+         
