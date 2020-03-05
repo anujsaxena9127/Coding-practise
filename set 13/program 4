@@ -1,0 +1,22 @@
+2, 10, 30, 68, 130
+nth term=n*n*n+n
+
+//solutions in c
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=0,i;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+
+nth=n*n*n+n;
+
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+output:-
+Enter the number
+3
+the  nth term of series is 30
