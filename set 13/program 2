@@ -1,0 +1,21 @@
+//solutions in c
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=1,i,fact=0;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+for(i=1;i<n;i++)
+{
+    nth=nth*i;
+    
+}
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+output:
+Enter the number
+5
+the  nth term of series is 24
