@@ -1,0 +1,30 @@
+//solutions in c
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int  n,nth=14,i;
+
+printf("Enter the number \n");
+scanf("%d",&n);
+for(i=2;i<=n;i++)
+{
+    if(i%2==0)
+    {
+        nth=nth*2;
+    }
+    else
+    {
+     nth=nth-8;
+    }
+    
+}
+
+
+printf("the  nth term of series is %d",nth);
+ return 0;
+}
+output:
+Enter the number
+2
+the  nth term of series is 28
